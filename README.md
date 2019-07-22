@@ -43,5 +43,20 @@ thrift --gen <language> <Thrift filename>
 # Protobuf
 **Protobuf** 
 
-    - Is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
-    - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
+   - Is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
+   
+   - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
+   
+   - Define message structures in .proto files.
+   - Generate codes via commandline:
+    
+   ```
+   protoc --java_out=java sample.proto 
+   ```
+   
+**Comparison Protobuf vs Thrift, Protobuf vs XML,JSON, AVRO**
+
+| Protobuf| Thrift|
+|---|---|
+| Manage cross-platform object serialization/deserialization processes| Mainly focuses on the communication layer between components of your system|
+    
