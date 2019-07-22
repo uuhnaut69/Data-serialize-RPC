@@ -11,7 +11,7 @@ Usage via maven:
     <version>0.10.0</version>
 </dependency>
 ```
-  - **Interface Description Language** allows defining of communication interfaces in a neutral language.
+  - **Interface Description Language** is a specification language used to describe a software component's application programming interface (API). IDLs describe an interface in a language-independent way, enabling communication between software components that do not share one language.
   - **Base Types**
     - bool – a boolean value (true or false)
     - byte – an 8-bit signed integer
@@ -36,4 +36,5 @@ Commandline:
 ``` 
 thrift --gen <language> <Thrift filename> 
 ```
-
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Apache_Thrift_architecture.png/273px-Apache_Thrift_architecture.png"/></p>
