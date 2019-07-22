@@ -1,5 +1,5 @@
 # Apache Thrift
-**Apache Thrift** was originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
+**Apache Thrift** forms a remote procedure call (RPC) framework, originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
 
 Thrift uses a special Interface Description Language (IDL) to define data types and service interfaces which are stored as ***.thrift*** files and used later as input by the compiler for generating the source code of client and server software that communicate over different programming languages.
 
@@ -11,7 +11,7 @@ Usage via maven:
     <version>0.10.0</version>
 </dependency>
 ```
-  - **Interface Description Language** allows defining of communication interfaces in a neutral language.
+  - **Interface Description Language** is a specification language used to describe a software component's application programming interface (API). IDLs describe an interface in a language-independent way, enabling communication between software components that do not share one language.
   - **Base Types**
     - bool – a boolean value (true or false)
     - byte – an 8-bit signed integer
@@ -32,4 +32,16 @@ Usage via maven:
   - **Exceptions** are functionally equivalent to structs, except that they inherit from the native exceptions.
   - **Services** are actually communication interfaces defined using Thrift types. They consist of a set of named functions, each with a list of parameters and a return type.
 
+Commandline: 
+``` 
+thrift --gen <language> <Thrift filename> 
+```
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Apache_Thrift_architecture.png/273px-Apache_Thrift_architecture.png"/></p>
+  
 
+# Protobuf
+**Protobuf** 
+
+    - Is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
+    - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
