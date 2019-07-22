@@ -32,4 +32,8 @@ Usage via maven:
   - **Exceptions** are functionally equivalent to structs, except that they inherit from the native exceptions.
   - **Services** are actually communication interfaces defined using Thrift types. They consist of a set of named functions, each with a list of parameters and a return type.
 
+Commandline: 
+``` 
+thrift --gen <language> <Thrift filename> 
+```
 
