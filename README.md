@@ -1,5 +1,5 @@
 # Apache Thrift
-**Apache Thrift** was originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
+**Apache Thrift** forms a remote procedure call (RPC) framework, originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
 
 Thrift uses a special Interface Description Language (IDL) to define data types and service interfaces which are stored as ***.thrift*** files and used later as input by the compiler for generating the source code of client and server software that communicate over different programming languages.
 
@@ -38,3 +38,10 @@ thrift --gen <language> <Thrift filename>
 ```
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Apache_Thrift_architecture.png/273px-Apache_Thrift_architecture.png"/></p>
+  
+
+# Protobuf
+**Protobuf** 
+
+    - Is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
+    - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
