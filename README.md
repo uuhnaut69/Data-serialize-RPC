@@ -30,6 +30,24 @@
 **MessagePack** 
 
    - ***MessagePack*** is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it's faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.
+   
+   - ***MessagePack*** has two concepts: type system and formats.
+
+   - Serialization is conversion from application objects into MessagePack formats via MessagePack type system.
+
+   - Deserialization is conversion from MessagePack formats into application objects via MessagePack type system.
+   
+   ```
+      Serialization:
+       Application objects
+       -->  MessagePack type system
+       -->  MessagePack formats (byte array)
+
+      Deserialization:
+       MessagePack formats (byte array)
+       -->  MessagePack type system
+       -->  Application objects
+   ```
 <hr/>
 
 **Kryo** 
