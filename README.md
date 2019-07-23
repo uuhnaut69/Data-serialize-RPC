@@ -61,8 +61,19 @@
 **Cap'n Proto**
 
    - ***Cap'n Proto*** is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think Protocol Buffers, except faster. In fact, in benchmarks, Cap’n Proto is INFINITY TIMES faster than Protocol Buffers.
+   - ***Advantages***
+      - ***Incremental reads:*** It is easy to start processing a Cap’n Proto message before you have received all of it since outer objects appear entirely before inner objects (as opposed to most encodings, where outer objects encompass inner objects).
+      - ***Random access:*** You can read just one field of a message without parsing the whole thing.
+   mmap: Read a large Cap’n Proto file by memory-mapping it. The OS won’t even read in the parts that you don’t access.
+      - ***Inter-language communication:*** Calling C++ code from, say, Java or Python tends to be painful or slow. With Cap’n Proto, the two languages can easily operate on the same in-memory data structure.
+      - ***Inter-process communication:*** Multiple processes running on the same machine can share a Cap’n Proto message via shared memory. No need to pipe data through the kernel. Calling another process can be just as fast and easy as calling another thread.
+      - ***Arena allocation:*** Manipulating Protobuf objects tends to be bogged down by memory allocation, unless you are very careful about object reuse. Cap’n Proto objects are always allocated in an “arena” or “region” style, which is faster and promotes cache locality.
+      - ***Tiny generated code:*** Protobuf generates dedicated parsing and serialization code for every message type, and this code tends to be enormous. Cap’n Proto generated code is smaller by an order of magnitude or more. In fact, usually it’s no more than some inline accessor methods!
+      - ***Tiny runtime library:*** Due to the simplicity of the Cap’n Proto format, the runtime library can be much smaller.
+      - ***Time-traveling RPC:*** Cap’n Proto features an RPC system that implements time travel such that call results are returned to the client before the request even arrives at the server!
 <br/>
-
+      <p align="center">
+  <img src="https://capnproto.org/images/time-travel.png" width="50%" height="50%"/></p>
 <hr/>
 
 **Apache Avro**
