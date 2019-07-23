@@ -32,6 +32,8 @@ Usage via maven:
   - **Exceptions** are functionally equivalent to structs, except that they inherit from the native exceptions.
   - **Services** are actually communication interfaces defined using Thrift types. They consist of a set of named functions, each with a list of parameters and a return type.
 
+***Notes***
+
 Commandline: 
 ``` 
 thrift --gen <language> <Thrift filename> 
@@ -39,6 +41,13 @@ thrift --gen <language> <Thrift filename>
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Apache_Thrift_architecture.png/273px-Apache_Thrift_architecture.png"/></p>
   
+***Notes*** 
+<p align="center">
+  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-procedure-call-1.png" width="50%" height="50%"/></p>
+
+<p align="center">
+  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-call-procedure-working.png" width="50%" height="50%"/></p>
+
 
 # Protobuf
 **Protobuf** 
@@ -57,4 +66,9 @@ thrift --gen <language> <Thrift filename>
 | Protobuf| Thrift|
 |---|---|
 | Manage cross-platform object serialization/deserialization processes| Mainly focuses on the communication layer between components of your system|
-    
+
+***Why should use Protobuf instead of XML or Json***
+
+- ***XML*** is notoriously space intensive, and encoding/decoding it can impose a huge performance penalty on applications. Also, navigating an XML DOM tree is considerably more complicated than navigating simple fields in a class normally would be.
+
+- ***Json*** is suitable when server side application is written in JavaScript, data from the service is directly consumed by a web browser
