@@ -6,6 +6,8 @@
    
    - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
    
+   - Protocol buffer contains a few nods to defining RPC protocols but does not include an official implementation (they do have one internally).
+   
    - Define message structures in .proto files.
    - Generate codes via commandline:
     
@@ -23,22 +25,33 @@
 
 - ***Json*** is suitable when server side application is written in JavaScript, data from the service is directly consumed by a web browser.
 
+<hr/>
+
 **MessagePack** 
 
-***MessagePack*** is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it's faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.
-<br/>
+   - ***MessagePack*** is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it's faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.
+<hr/>
 
 **Kryo** 
 
-***Kryo***is a fast and efficient binary object graph serialization framework for Java. The goals of the project are high speed, low size, and an easy to use API. The project is useful any time objects need to be persisted, whether to a file, database, or over the network.
+   - ***Kryo*** is a fast and efficient binary object graph serialization framework for Java. The goals of the project are high speed, low size, and an easy to use API. The project is useful any time objects need to be persisted, whether to a file, database, or over the network.
+   - ***Kryo*** is not multi-language and is specifically targeted at high-performance Java serialization and TCP/UDP connections.
+   
+<hr/>
 
 Kryo can also perform automatic deep and shallow copying/cloning. This is direct copying from object to object, not object to bytes to object.
-<br/>
+<hr/>
 
 **Cap'n Proto**
 
-***Cap'n Proto*** is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think Protocol Buffers, except faster. In fact, in benchmarks, Cap’n Proto is INFINITY TIMES faster than Protocol Buffers.
+   - ***Cap'n Proto*** is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think Protocol Buffers, except faster. In fact, in benchmarks, Cap’n Proto is INFINITY TIMES faster than Protocol Buffers.
 <br/>
+
+<hr/>
+
+**Apache Avro**
+
+   ***Apache Avro*** is a newer project designed to accomplish many of the same goals of Protobuf or Thrift but without the static compilation step and greater interop with dynamic languages. Avro is being driven largely by Hadoop, afaict. Messages are defined in JSON (truly more painful than Protobuf or Thrift). Language bindings exist for C, C++, Java, Python, Ruby, and PHP with RPC available in all of those but PHP. Code gen is available if you want to generate code from your messages but your data can be built with generic APIs.
 
 <hr/>
 
@@ -49,9 +62,9 @@ Kryo can also perform automatic deep and shallow copying/cloning. This is direct
 <p align="center">
   <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-call-procedure-working.png" width="50%" height="50%"/></p>
 
-**Apache Thrift** forms a remote procedure call (RPC) framework, originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
+**Apache Thrift** forms a remote procedure call (RPC) framework (Thrift also includes the RPC transport layer), originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
 
-Thrift uses a special Interface Description Language (IDL) to define data types and service interfaces which are stored as ***.thrift*** files and used later as input by the compiler for generating the source code of client and server software that communicate over different programming languages.
+Thrift uses a special Interface Description Language (IDL) to define data types and service interfaces which are stored as ***.thrift*** files and used later as input by the compiler for generating the source code of client and server software that communicate over different programming languages. 
 
 Usage via maven:
 ```
