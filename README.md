@@ -1,4 +1,44 @@
-# Apache Thrift
+# Data Serialize
+
+**Protobuf** 
+
+   - Is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
+   
+   - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
+   
+   - Define message structures in .proto files.
+   - Generate codes via commandline:
+    
+   ```
+   protoc --java_out=java sample.proto 
+   ```
+
+| Protobuf| Thrift|
+|---|---|
+| Manage cross-platform object serialization/deserialization processes| Mainly focuses on the communication layer between components of your system|
+
+***Why should use Protobuf instead of XML or Json***
+
+- ***XML*** is notoriously space intensive, and encoding/decoding it can impose a huge performance penalty on applications. Also, navigating an XML DOM tree is considerably more complicated than navigating simple fields in a class normally would be.
+
+- ***Json*** is suitable when server side application is written in JavaScript, data from the service is directly consumed by a web browser.
+
+**MessagePack**
+<br/>
+**Kryo**
+<br/>
+**Cap'n Proto**
+<br/>
+
+<hr/>
+
+# RPC (Remote Call Procedure)
+<p align="center">
+  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-procedure-call-1.png" width="50%" height="50%"/></p>
+
+<p align="center">
+  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-call-procedure-working.png" width="50%" height="50%"/></p>
+
 **Apache Thrift** forms a remote procedure call (RPC) framework, originally developed by the Facebook development team and is currently maintained by Apache. Mainly focuses on the communication layer between components of your system.
 
 Thrift uses a special Interface Description Language (IDL) to define data types and service interfaces which are stored as ***.thrift*** files and used later as input by the compiler for generating the source code of client and server software that communicate over different programming languages.
@@ -40,40 +80,7 @@ thrift --gen <language> <Thrift filename>
 ```
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Apache_Thrift_architecture.png/273px-Apache_Thrift_architecture.png"/></p>
-  
-***Notes*** 
-<p align="center">
-  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-procedure-call-1.png" width="50%" height="50%"/></p>
 
-<p align="center">
-  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/operating-system-remote-call-procedure-working.png" width="50%" height="50%"/></p>
-
-
-# Protobuf
-**Protobuf** 
-
-   - Is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
-   
-   - Is a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
-   
-   - Define message structures in .proto files.
-   - Generate codes via commandline:
-    
-   ```
-   protoc --java_out=java sample.proto 
-   ```
-
-| Protobuf| Thrift|
-|---|---|
-| Manage cross-platform object serialization/deserialization processes| Mainly focuses on the communication layer between components of your system|
-
-***Why should use Protobuf instead of XML or Json***
-
-- ***XML*** is notoriously space intensive, and encoding/decoding it can impose a huge performance penalty on applications. Also, navigating an XML DOM tree is considerably more complicated than navigating simple fields in a class normally would be.
-
-- ***Json*** is suitable when server side application is written in JavaScript, data from the service is directly consumed by a web browser
-
-# GRPC
 
 **GRPC** is RPC framework, using protocol buffers as both its Interface Definition Language (IDL) and as its underlying message interchange format.
 
