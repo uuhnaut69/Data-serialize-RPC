@@ -23,11 +23,21 @@
 
 - ***Json*** is suitable when server side application is written in JavaScript, data from the service is directly consumed by a web browser.
 
-**MessagePack**
+**MessagePack** 
+
+***MessagePack*** is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it's faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.
 <br/>
-**Kryo**
+
+**Kryo** 
+
+***Kryo***is a fast and efficient binary object graph serialization framework for Java. The goals of the project are high speed, low size, and an easy to use API. The project is useful any time objects need to be persisted, whether to a file, database, or over the network.
+
+Kryo can also perform automatic deep and shallow copying/cloning. This is direct copying from object to object, not object to bytes to object.
 <br/>
+
 **Cap'n Proto**
+
+***Cap'n Proto*** is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think Protocol Buffers, except faster. In fact, in benchmarks, Cap’n Proto is INFINITY TIMES faster than Protocol Buffers.
 <br/>
 
 <hr/>
