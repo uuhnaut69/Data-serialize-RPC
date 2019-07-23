@@ -72,3 +72,12 @@ thrift --gen <language> <Thrift filename>
 - ***XML*** is notoriously space intensive, and encoding/decoding it can impose a huge performance penalty on applications. Also, navigating an XML DOM tree is considerably more complicated than navigating simple fields in a class normally would be.
 
 - ***Json*** is suitable when server side application is written in JavaScript, data from the service is directly consumed by a web browser
+
+# GRPC
+
+**GRPC** is RPC framework, using protocol buffers as both its Interface Definition Language (IDL) and as its underlying message interchange format.
+
+<p align="center">
+  <img src="https://grpc.io/img/landing-2.svg" width="50%" height="50%"/></p>
+  
+  
