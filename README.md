@@ -53,8 +53,6 @@ thrift --gen <language> <Thrift filename>
    ```
    protoc --java_out=java sample.proto 
    ```
-   
-**Comparison Protobuf vs Thrift, Protobuf vs XML,JSON, AVRO**
 
 | Protobuf| Thrift|
 |---|---|
